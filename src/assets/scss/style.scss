@@ -1,0 +1,213 @@
+@import 'themes-vars.module.scss';
+
+.slick-arrow:before {
+    color: $grey500;
+}
+
+.scrollbar-container {
+    .ps__rail-y {
+        &:hover > .ps__thumb-y,
+        &:focus > .ps__thumb-y,
+        &.ps--clicking .ps__thumb-y {
+            background-color: $grey500;
+            width: 5px;
+        }
+    }
+    .ps__thumb-y {
+        background-color: $grey500;
+        border-radius: 6px;
+        width: 5px;
+        right: 0;
+    }
+}
+
+.scrollbar-container.ps,
+.scrollbar-container > .ps {
+    &.ps--active-y > .ps__rail-y {
+        width: 5px;
+        background-color: transparent !important;
+        z-index: 999;
+        &:hover,
+        &.ps--clicking {
+            width: 5px;
+            background-color: transparent;
+        }
+    }
+    &.ps--scrolling-y > .ps__rail-y,
+    &.ps--scrolling-x > .ps__rail-x {
+        opacity: 0.4;
+        background-color: transparent;
+    }
+}
+
+@keyframes wings {
+    50% {
+        transform: translateY(-40px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%,
+    20%,
+    53%,
+    to {
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        transform: translateZ(0);
+    }
+    40%,
+    43% {
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        transform: translate3d(0, -5px, 0);
+    }
+    70% {
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        transform: translate3d(0, -7px, 0);
+    }
+    80% {
+        transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        transform: translateZ(0);
+    }
+    90% {
+        transform: translate3d(0, -2px, 0);
+    }
+}
+
+@keyframes slideY {
+    0%,
+    50%,
+    100% {
+        transform: translateY(0px);
+    }
+    25% {
+        transform: translateY(-10px);
+    }
+    75% {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes slideX {
+    0%,
+    50%,
+    100% {
+        transform: translateX(0px);
+    }
+    25% {
+        transform: translateX(-10px);
+    }
+    75% {
+        transform: translateX(10px);
+    }
+}
+
+.MuiTableCell-root.MuiTableCell-head {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    color: #0c8bfd;
+}
+
+.MuiTableHead-root {
+    background: rgba(12, 139, 253, 0.07);
+}
+
+.MuiTable-root {
+    border-radius: 8px;
+}
+
+.MuiTableCell-root {
+    padding: 13px;
+    font-size: 12px;
+}
+
+.light-group {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+.light-1 {
+    position: absolute;
+    border-radius: 20px;
+    filter: blur(544px);
+    width: 236px;
+    height: 265px;
+    left: -11px;
+    top: 521px;
+    background: #0c8bfd;
+}
+
+.light-2 {
+    position: absolute;
+    border-radius: 20px;
+    filter: blur(544px);
+    width: 227px;
+    height: 178px;
+    left: 152px;
+    top: 775px;
+    background: #0cd2fd;
+}
+.light-3 {
+    position: absolute;
+    border-radius: 20px;
+    filter: blur(544px);
+    width: 189px;
+    height: 178px;
+    left: -67px;
+    top: 460px;
+    background: #0cd2fd;
+}
+.light-4 {
+    position: absolute;
+    border-radius: 20px;
+    filter: blur(544px);
+    width: 236px;
+    height: 265px;
+    left: 1140px;
+    top: 17px;
+    background: #0c8bfd;
+}
+.light-5 {
+    position: absolute;
+    border-radius: 20px;
+    filter: blur(544px);
+    width: 236px;
+    height: 265px;
+    left: 986px;
+    top: 510px;
+    background: #0c8bfd;
+}
+.light-6 {
+    position: absolute;
+    border-radius: 20px;
+    filter: blur(544px);
+    width: 227px;
+    height: 178px;
+    left: 1026px;
+    top: 282px;
+    background: #0cd2fd;
+}
+
+.MuiCheckbox-root.Mui-checked {
+    color: $primary800;
+}
+
+.MuiFormControlLabel-label {
+    font-size: 14px;
+}
